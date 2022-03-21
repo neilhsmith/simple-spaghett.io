@@ -6,9 +6,6 @@ Gets the recipe from the page's structured data (JSON-LD, Microdata and RDFa) so
 
 ## TODO
 
-- setup
-  - testing, linting, etc...
-    - do duration first as a feature w/ its own components
 - recipe lib & tests
   - undefined fields are fine, no need to do the conditional object creation stuff
 - frontend mvp
