@@ -6,8 +6,6 @@ Gets the recipe from the page's structured data (JSON-LD, Microdata and RDFa) so
 
 ## TODO
 
-- recipe lib & tests
-  - undefined fields are fine, no need to do the conditional object creation stuff
 - frontend mvp
 - authentication
 - save/view recipes

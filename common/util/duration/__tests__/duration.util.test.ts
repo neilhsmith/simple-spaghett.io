@@ -51,10 +51,10 @@ describe("duration util", () => {
   ];
 
   invalidTestCases.forEach((i) =>
-    it(`returns undefined for invalid input: '${i}'`, () => {
+    it(`returns null for invalid input: '${i}'`, () => {
       const result = parseISO8601Duration(i);
 
-      expect(result).toBeUndefined();
+      expect(result).toBeNull();
     })
   );
 

@@ -12,12 +12,12 @@ export type Duration = {
 /**
  * Attempts to parse the given string as an ISO 8601 duration. See https://en.wikipedia.org/wiki/ISO_8601#Durations.
  * @param d The string to parse.
- * @returns A Duration object or undefined if `d` is not a valid ISO 8601 duration.
+ * @returns A Duration object or null if `d` is not a valid ISO 8601 duration.
  */
-export const parseISO8601Duration = (d: string): Duration | undefined => {
+export const parseISO8601Duration = (d: string): Duration | null => {
   const match = iso8601DurationRegex.exec(d);
   if (!match || !match.groups) {
-    return undefined;
+    return null;
   }
 
   const durationValues = {
@@ -31,11 +31,9 @@ export const parseISO8601Duration = (d: string): Duration | undefined => {
   };
 
   // the duration is only valid if it includes at least one part
-  const validDuration = Object.values(durationValues).find(
-    (d) => d !== undefined && d !== 0
-  );
+  const validDuration = Object.values(durationValues).find((d) => !!d);
   if (!validDuration) {
-    return undefined;
+    return null;
   }
 
   return {
