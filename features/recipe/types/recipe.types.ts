@@ -1,6 +1,6 @@
 export type Recipe = {
   categories?: string[];
-  cookTime?: number;
+  cookTime?: string;
   cuisine?: string[];
   description?: string;
   ingredients: string[];
@@ -8,9 +8,9 @@ export type Recipe = {
   keywords?: string[];
   name: string;
   nutrition?: Nutrition;
-  prepTime?: number;
+  prepTime?: string;
   recipeYield?: string;
-  totalTime?: number;
+  totalTime?: string;
   url?: string;
 };
 

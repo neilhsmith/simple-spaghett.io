@@ -6,7 +6,6 @@ Gets the recipe from the page's structured data (JSON-LD, Microdata and RDFa) so
 
 ## TODO
 
-- frontend mvp
 - authentication
 - save/view recipes
 - create/edit recipes
